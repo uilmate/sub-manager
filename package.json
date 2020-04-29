@@ -1,0 +1,65 @@
+{
+    "name": "@uilmate/sub-manager",
+    "version": "0.1.0",
+    "license": "MIT",
+    "description": "Simple RxJS subscriptions manager",
+    "scripts": {
+        "test:watch": "jest --watch",
+        "test": "jest",
+        "build": "rimraf dist && tsc",
+        "prepublish": "rimraf dist && yarn test && yarn build"
+    },
+    "devDependencies": {
+        "@types/jest": "^25.2.1",
+        "jest": "^25.4.0",
+        "rimraf": "^3.0.2",
+        "ts-jest": "^25.4.0",
+        "typescript": "^3.8.3"
+    },
+    "dependencies": {
+        "rxjs": "^6.5.5"
+    },
+    "jest": {
+        "moduleFileExtensions": [
+            "ts",
+            "js"
+        ],
+        "testRegex": "/__tests__/.*\\.(ts|js)$",
+        "transform": {
+            "\\.(ts)$": "ts-jest"
+        }
+    },
+    "browserslist": [
+        "last 2 versions",
+        "not dead",
+        "not ie 11",
+        "> 1%"
+    ],
+    "keywords": [
+        "RxJS subscription",
+        "RxJS subscription management",
+        "RxJS unsubscribe",
+        "Observable unsubscribe"
+    ],
+    "author": {
+        "email": "roman.simik1@gmail.com",
+        "name": "Roman Šimík",
+        "url": "https://www.linkedin.com/in/romansimik/"
+    },
+    "contributors": [
+        {
+            "name": "Karel Juřička",
+            "url": "https://www.linkedin.com/in/karel-ju%C5%99i%C4%8Dka-b88110179/"
+        }
+    ],
+    "maintainers": [
+        "@uilmate"
+    ],
+    "bugs": {
+        "url": "https://github.com/uilmate/som/issues"
+    },
+    "homepage": "https://github.com/uilmate/som",
+    "repository": "github:uilmate/som",
+    "main": "dist/index.js",
+    "typings": "./dist/index.d.ts"
+}

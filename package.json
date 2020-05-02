@@ -58,8 +58,8 @@
     "bugs": {
         "url": "https://github.com/uilmate/sub-manager/issues"
     },
-    "homepage": "https://github.com/sub-manager",
-    "repository": "github:uilmate/som",
+    "homepage": "https://github.com/uilmate/sub-manager#readme",
+    "repository": "github:uilmate/sub-manager",
     "main": "dist/index.js",
     "typings": "./dist/index.d.ts"
 }

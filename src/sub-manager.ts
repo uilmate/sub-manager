@@ -12,7 +12,7 @@ export class SubManager {
      *
      * @example Adding subscription
      * ```typescript
-     *  this.subsManager.subs.key = observable$.subscribe()
+     *  this.subManager.subs.key = observable$.subscribe()
      * ```
      */
     store: SubscriptionsMap = {};
@@ -20,28 +20,25 @@ export class SubManager {
     /**
      * Checks if at least 1 of the given keys exist in the store.
      *
-     * @param keyOrKeys - key or array of keys
+     * @param keys - keys of the store
      * @returns true if at least 1 of the given keys exist in the store
      */
-    has(keyOrKeys: string | string[]): boolean {
-        if (Array.isArray(keyOrKeys)) {
-            for (const key of keyOrKeys) {
-                if (!!this.store[key]) {
-                    return true;
-                }
+    has(...keys: string[]): boolean {
+        for (const key of keys) {
+            if (!!this.store[key]) {
+                return true;
             }
-            return false;
         }
-        return !!this.store[keyOrKeys];
+        return false;
     }
 
     /**
-     * Checks if all all given keys exist in the store.
+     * Checks if all of given keys exist in the store.
      *
-     * @param keys - array of keys
+     * @param keys - keys of the store
      * @returns true if all given keys exist in the store
      */
-    hasAll(keys: string[]): boolean {
+    hasAll(...keys: string[]): boolean {
         for (const key of keys) {
             if (!this.store[key]) {
                 return false;
@@ -53,17 +50,12 @@ export class SubManager {
     /**
      * Unsubscribes and clears subscriptions at the given keys of the store
      *
-     * @param keyOrKeys - key or array of keys
+     * @param keys - keys of the store
      */
-    clear(keyOrKeys: string | string[]) {
-        if (Array.isArray(keyOrKeys)) {
-            Object.keys(this.store)
-                .forEach((key: string) => {
-                    this.__clearSub(key);
-                });
-        } else {
-            this.__clearSub(keyOrKeys);
-        }
+    clear(...keys: string[]) {
+        keys.forEach((key: string) => {
+            this.__clearSub(key);
+        })
     }
 
     /**
@@ -91,6 +83,7 @@ export class SubManager {
                 subscription.unsubscribe();
             });
     }
+
     /**
      * Unsubscribes all subscriptions in the key/value subscription object
      *

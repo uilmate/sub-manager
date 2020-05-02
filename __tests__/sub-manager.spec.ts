@@ -24,7 +24,7 @@ describe('[class] SubManager', () => {
         it('should return true', () => {
             expect(subsManager.store).toHaveProperty('test1');
             expect(subsManager.store).toHaveProperty('test2');
-            expect(subsManager.hasAll(['test1', 'test2'])).toBe(true);
+            expect(subsManager.hasAll('test1', 'test2')).toBe(true);
         })
 
     });

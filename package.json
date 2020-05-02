@@ -1,6 +1,6 @@
 {
     "name": "@uilmate/sub-manager",
-    "version": "1.0.100",
+    "version": "1.0.200",
     "license": "MIT",
     "description": "Simple RxJS subscriptions manager",
     "scripts": {

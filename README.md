@@ -3,7 +3,7 @@
 [![lifetime downloads](https://img.shields.io/npm/dt/@uilmate/sub-manager.svg)]()
 [![weekly downloads](https://img.shields.io/npm/dw/@uilmate/sub-manager.svg)]()
 
-#SubManager 
+# SubManager 
 
 Simple RxJS helper class, which makes easier managing subscriptions.
 
@@ -15,11 +15,11 @@ reason why this package has been created.
 as Angular, Vue, React). This means you can use this at every project where are you 
 using RxJS.
 
-#Installation
+# Installation
 
 `npm install @uilmate/sub-manager` or `yarn add @uilmate/sub-manager`
 
-#Usage
+# Usage
 
 #### Storing subscriptions
 ```typescript
@@ -35,7 +35,7 @@ subManager.store.sub3 = [[[someObservable$3.subscribe()]], someObservable$4.subs
 - NOTE: please use the store object only for setting the subscriptions 
 (for deleting use the class clear methods)
 
-#Examples
+# Examples
 #### Angular example
 
 ```typescript
